@@ -14,8 +14,10 @@ class CreateVisitorModelsTable extends Migration
     public function up()
     {
         Schema::create('visitor_models', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->bigIncrements('id');
+            $table->string('ip_address');
+            $table->string('visit_time');
+
         });
     }
 
